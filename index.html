@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaghat Plus</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffcccc, #ff6666);
+            /* Gradient light red color for the body */
+        }
+
+        header {
+            background-color: #ff0000;
+            /* Red background color */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #f1f1f1;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+
+
+
+        .filters {
+            background-color: #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .filter-button {
+            background-color: #4CAF50;
+            /* Green background color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .category-card {
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            /* Increased border-radius for round shape */
+            overflow: hidden;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Box shadow added */
+            cursor: pointer;
+        }
+
+        .category-card img {
+            width: 80%;
+            /* Reduced image size */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-bottom: 1px solid #ddd;
+            border-radius: 50%;
+            /* Make the image circular */
+            margin-top: 10px;
+            /* Adjust margin to center the circular image */
+        }
+
+        .category-card-content {
+            padding: 15px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 600px) {
+            .categories {
+                padding: 10px;
+            }
+
+            .category-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Balaghat Plus</h1>
+    </header>
+
+    <nav>
+       
+       
+        <a href="#">Home</a>
+        <a href="#">Category</a>
+        <a href="#">Shop</a>
+        <a href="registraion form.html">Register</a>
+        <a href="login.html">Login</a>
+        <div style="float: right; padding: 14px 16px;">
+            <input type="text" placeholder="Search">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+
+    <div class="filters">
+        <button class="filter-button" onclick="filterBy('plumber')">Plumber</button>
+        <button class="filter-button" onclick="filterBy('mason')">Mason</button>
+        <!-- Add more filter buttons as needed -->
+    </div>
+
+    <div class="categories">
+        <!-- Category 1 - Plumber -->
+        <div class="category-card">
+            <img src="electrician.jpg" alt="Plumber Image">
+            <div class="category-card-content">
+                <p><a href="#">Plumber</a></p>
+                <p>Quality plumbing services for your home and office. Contact us for reliable and efficient plumbing
+                    solutions.</p>
+            </div>
+        </div>
+
+        <!-- Category 2 - Mason -->
+        <div class="category-card">
+            <img src="electrician.jpg" alt="Mason Image">
+            <div class="category-card-content">
+                <p><a href="#">Mason</a></p>
+                <p>Experienced masonry services for construction and renovation projects.</p>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="electrician.jpg" alt="Plumber Image">
+            <div class="category-card-content">
+                <p><a href="#">Plumber</a></p>
+                <p>Quality plumbing services for your home and office. Contact us for reliable and efficient plumbing
+                    solutions.</p>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="electrician.jpg" alt="Plumber Image">
+            <div class="category-card-content">
+                <p><a href="#">Plumber</a></p>
+                <p>Quality plumbing services for your home and office. Contact us for reliable and efficient plumbing
+                    solutions.</p>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="electrician.jpg" alt="Plumber Image">
+            <div class="category-card-content">
+                <p><a href="#">Plumber</a></p>
+                <p>Quality plumbing services for your home and office. Contact us for reliable and efficient plumbing
+                    solutions.</p>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="electrician.jpg" alt="Plumber Image">
+            <div class="category-card-content">
+                <p><a href="#">Real Estate</a></p>
+                <p> Trust us to turn your real estate goals into reality. Elevate your property experience with
+                    professionalism, integrity, and client satisfaction.</p>
+            </div>
+        </div>
+
+        <!-- Add more categories and their cards as needed -->
+    </div>
+
+    <footer>
+        <p>Contact Number: Your Contact Number</p>
+        <p>Office Address: Your Office Address</p>
+    </footer>
+
+    <script>
+        function filterBy(category) {
+            // Implement your filter logic here
+            alert('Filter by ' + category);
+        }
+    </script>
+
+</body>
+
+</html>
